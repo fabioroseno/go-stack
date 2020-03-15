@@ -18,17 +18,27 @@ module.exports = {
          allowNull: false,
          unique: true,
         },
-        passaword_hash: {
+        password_hash: {
          type: Sequelize.STRING,
          allowNull: false,
         },
         provider: {
          type: Sequelize.BOOLEAN,
+         defaultValue: false,
+         allowNull: false,
+        },
+        created_at: {
+         type: Sequelize.DATE,
+         allowNull: false,
+        },
+        updated_at: {
+         type: Sequelize.DATE,
+         allowNull: false,
         },
       });
   },
 
   down: (queryInterface) => {
-      return queryInterface.dropTable('users');
+    return queryInterface.dropTable('users');
   }
 };
