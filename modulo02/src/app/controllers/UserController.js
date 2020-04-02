@@ -17,6 +17,7 @@ class UserController {
       provider,
     });
   }
+
 }
 
 export default new UserController();
